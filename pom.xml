@@ -82,25 +82,14 @@
 			</plugin>
 			
 			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>com.github.jsimone</groupId>
-                                <artifactId>webapp-runner</artifactId>
-                                <version>9.0.13.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+			  <groupId>com.heroku.sdk</groupId>
+			  <artifactId>heroku-maven-plugin</artifactId>
+			  <configuration>
+			    <processTypes>
+			      <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Application</web>
+			    </processTypes>
+			  </configuration>
+			</plugin>
 			
 		</plugins>
 	</build>

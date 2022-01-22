@@ -15,6 +15,8 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
@@ -71,7 +73,7 @@
 			</plugin>
 
 <!--			also add these plugins-->
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -79,9 +81,9 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			
-			<plugin>
+<!-- 			<plugin>
 			  <groupId>com.heroku.sdk</groupId>
 			  <artifactId>heroku-maven-plugin</artifactId>
 			  <configuration>
@@ -89,7 +91,7 @@
 			      <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Application</web>
 			    </processTypes>
 			  </configuration>
-			</plugin>
+			</plugin> -->
 			
 		</plugins>
 	</build>
